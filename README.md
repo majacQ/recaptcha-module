@@ -50,8 +50,9 @@ using top level options
   recaptcha: {
     hideBadge: Boolean, // Hide badge element (v3 & v2 via size=invisible)
     language: String,   // Recaptcha language (v2)
+    mode: String,       // Mode: 'base', 'enterprise'
     siteKey: String,    // Site key for requests
-    version: Number,     // Version
+    version: Number,    // Version
     size: String        // Size: 'compact', 'normal', 'invisible' (v2)
   },
   // ...
@@ -71,6 +72,12 @@ export default {
   }
 }
 ```
+
+## Generate reCAPTCHA Site Keys
+
+You can generate keys for the `basic` mode [by registering a new site](https://www.google.com/recaptcha/admin/create).
+
+For the `enterprise` mode, [use the Google Cloud Console](https://console.cloud.google.com/security/recaptcha).
 
 ## Usage
 
@@ -104,7 +111,9 @@ async onSubmit() {
   }
 },
 ```
-See: [v2 example](https://github.com/nuxt-community/recaptcha-module/tree/master/example/v2)
+See:
+- [v2 example (base)](https://github.com/nuxt-community/recaptcha-module/tree/master/example/base/v2)
+- [v2 example (enterprise)](https://github.com/nuxt-community/recaptcha-module/tree/master/example/enterprise/v2)
 
 ### reCAPTCHA v3
 
@@ -144,13 +153,15 @@ beforeDestroy() {
 }
 ```
 
-See: [v3 example](https://github.com/nuxt-community/recaptcha-module/tree/master/example/v3)
+See:
+- [v3 example (base)](https://github.com/nuxt-community/recaptcha-module/tree/master/example/base/v3)
+- [v3 example (enterprise)](https://github.com/nuxt-community/recaptcha-module/tree/master/example/enterprise/v3)
 
 
 ### Server Side
 
 When you send `data + token` to the server, you should verify the token on the server side to make sure it does not requested from a bot.
-You can find out how to verify token on the server side by looking at the [server middleware](https://github.com/nuxt-community/recaptcha-module/tree/master/example/v2/api/recaptcha.js) inside v2 example. (The server side is same for both versions)
+You can find out how to verify token on the server side by looking at the [server middleware](https://github.com/nuxt-community/recaptcha-module/blob/master/example/base/v2/api/recaptcha.js) inside v2 example. (The server side is same for both versions)
 
 
 ## Info Hiding Badges
@@ -160,7 +171,7 @@ You're allowed to hide the badge (i.e. for v3 and v2 invisible), as long as you 
 For example:
 
 ```html
-<small>This site is protected by reCAPTCHA and the Google 
+<small>This site is protected by reCAPTCHA and the Google
     <a href="https://policies.google.com/privacy">Privacy Policy</a> and
     <a href="https://policies.google.com/terms">Terms of Service</a> apply.
 </small>

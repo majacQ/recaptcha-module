@@ -7,9 +7,24 @@ export interface ReCaptchaOptions {
   hideBadge?: boolean
 
   /**
+   * ReCaptcha language (v2)
+   */
+  language?: string
+
+  /**
+   * ReCaptcha mode.
+   */
+  mode?: 'base' | 'enterprise'
+
+  /**
    * Site key to send requests
    */
   siteKey: string
+
+  /**
+   * Size of the widget (v2)
+   */
+  size?: 'compact' | 'normal' | 'invisible'
 
   /**
    * Version

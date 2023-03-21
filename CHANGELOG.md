@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/nuxt-community/recaptcha-module/compare/v1.1.1...v1.1.2) (2023-03-21)
+
+
+### Bug Fixes
+
+* **types:** add missing optional properties to ReCaptchaOptions interface ([#121](https://github.com/nuxt-community/recaptcha-module/issues/121)) ([9370bd2](https://github.com/nuxt-community/recaptcha-module/commit/9370bd2))
+
+
+
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/nuxt-community/recaptcha-module/compare/v1.1.0...v1.1.1) (2022-05-24)
+
+
+### Bug Fixes
+
+* check enterprise mode instead of version ([4a8bc52](https://github.com/nuxt-community/recaptcha-module/commit/4a8bc52))
+
+
+
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/nuxt-community/recaptcha-module/compare/v1.0.4...v1.1.0) (2022-05-21)
+
+
+### Features
+
+* add enterprise mode ([17a7d5f](https://github.com/nuxt-community/recaptcha-module/commit/17a7d5f))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/nuxt-community/recaptcha-module/compare/v1.0.3...v1.0.4) (2021-03-21)
 
